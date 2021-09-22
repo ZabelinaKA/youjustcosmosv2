@@ -24,17 +24,12 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        val navView: BottomNavigationView = binding.botNav
 
-        val navView: BottomNavigationView = binding.bot_nav
-
-        val navController = findNavController(Build.VERSION_CODES.R.id.nav_host_fragment_container)
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                Build.VERSION_CODES.R.id.homeFragment,
-                Build.VERSION_CODES.R.id.settings
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+        val navController = findNavController(R.id.nav_host_fragment_container)
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment, R.id.settings))
+        setupActionBarWithNavController(navController,appBarConfiguration)
         navView.setupWithNavController(navController)
+
     }
 }

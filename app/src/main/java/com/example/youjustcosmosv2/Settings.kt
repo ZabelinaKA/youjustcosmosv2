@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.youjustcosmosv2.databinding.FragmentSettingsBinding
 import com.example.youjustcosmosv2.databinding.FragmentSettingsBinding.*
 
-class Settings : Fragment(R.layout.fragment_settings), AstoAdapter.AstroClickListener {
+class Settings : Fragment(R.layout.fragment_settings), AstroAdapter.AstroClickListener {
     private lateinit var binding: FragmentSettingsBinding
 
     override fun onAstroClick(id: Int) {

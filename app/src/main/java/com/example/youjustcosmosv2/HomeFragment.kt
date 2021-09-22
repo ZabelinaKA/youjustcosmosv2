@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.youjustcosmosv2.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment(R.layout.fragment_home), AstoAdapter.AstroClickListener {
+
+class HomeFragment : Fragment(R.layout.fragment_home), AstroAdapter.AstroClickListener {
     private lateinit var binding: FragmentHomeBinding
 
     override fun onAstroClick(id: Int) {
@@ -23,20 +24,24 @@ class HomeFragment : Fragment(R.layout.fragment_home), AstoAdapter.AstroClickLis
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(inflater,container,false)
+        binding = FragmentHomeBinding.inflate(
+            inflater,
+            container,
+            false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = AstoAdapter(listOfAstro)
-        val recyclerView: RecyclerView = binding.recycler
-        recyclerView.layoutManager = LinearLayoutManager(requireContext(),
-            RecyclerView.VERTICAL,false)
-        recyclerView.adapter = adapter
-        binding.btnMap.setOnClickListener {
-            val action = HomeFragmentDirections.toDetails(Id)
-            findNavController().navigate(action)
-        }
+        val adapter = AstroAdapter(listOfAstro)
+        adapter.clickListener = this
+        binding.recycler.adapter = adapter
+        adapter.recycler.layoutManager = LinearLayoutManager(
+            requireContext(), RecyclerView.VERTICAL, false)
+       binding.homeFragment.setOnClickListener {
+           val action = HomeFragmentDirections.toDetails(0)
+           findNavController().navigate(action)
+       }
+
     }
 }
