@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/settings"
+    android:background="#D1D0D7"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Settings">
+
+    <Toolbar
+        android:id="@+id/tb_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#122FAA"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="#122FAA"
+        android:elevation="5dp"
+        android:src="@drawable/dehaze"
+        app:layout_constraintBottom_toBottomOf="@id/tb_topbar"
+        app:layout_constraintStart_toStartOf="@id/tb_topbar"
+        app:layout_constraintTop_toTopOf="@id/tb_topbar" />
+
+    <TextView
+        android:id="@+id/настройка"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:elevation="5dp"
+        android:text="Настройки"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="@id/tb_topbar"
+        app:layout_constraintEnd_toEndOf="@id/tb_topbar"
+        app:layout_constraintStart_toStartOf="@+id/tb_topbar"
+        app:layout_constraintTop_toTopOf="@id/tb_topbar" />
+
+
+    <TextView
+        android:id="@+id/tv_set1"
+        android:layout_width="287dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/backarrow"
+        android:text="  Внешний вид"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/настройка" />
+
+    <Switch
+        android:id="@+id/sw_set1"
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/backarrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_set1"
+        app:layout_constraintTop_toBottomOf="@id/настройка" />
+
+    <TextView
+        android:id="@+id/tv_set2"
+        android:layout_width="286dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/backarrow"
+        android:text="  Для слабовидящих"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_set1" />
+
+    <Switch
+        android:id="@+id/sw_set2"
+        android:layout_width="126dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/backarrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_set2"
+        app:layout_constraintTop_toBottomOf="@id/sw_set1" />
+
+    <TextView
+        android:id="@+id/tv_set3"
+        android:layout_width="285dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/backarrow"
+        android:text="  Язык (RU/US)"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_set2" />
+
+    <Switch
+        android:id="@+id/sw_set3"
+        android:layout_width="127dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/backarrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_set3"
+        app:layout_constraintTop_toBottomOf="@id/sw_set2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

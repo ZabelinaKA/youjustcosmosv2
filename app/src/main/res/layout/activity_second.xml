@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <Toolbar
+        android:id="@+id/tb_topbar_1"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#122FAA"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="#122FAA"
+        android:elevation="5dp"
+        android:src="@drawable/dehaze"
+        app:layout_constraintBottom_toBottomOf="@id/tb_topbar_1"
+        app:layout_constraintStart_toStartOf="@id/tb_topbar_1"
+        app:layout_constraintTop_toTopOf="@id/tb_topbar_1" />
+
+    <ImageView
+        android:layout_width="107dp"
+        android:layout_height="63dp"
+        android:layout_gravity="center_horizontal"
+        android:elevation="5dp"
+        android:src="@drawable/space"
+        app:layout_constraintTop_toBottomOf="@id/filter" />
+
+    <ImageButton
+        android:id="@+id/filter"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="end"
+        android:backgroundTint="@android:color/transparent"
+        android:elevation="5dp"
+        android:src="@drawable/ic_baseline_filter_alt_24"
+        app:layout_constraintBottom_toBottomOf="@id/tb_topbar_1"
+        app:layout_constraintEnd_toEndOf="@id/tb_topbar_1"
+        app:layout_constraintTop_toTopOf="@id/tb_topbar_1" />
+
+    <TextView
+        android:id="@+id/astronaut"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:layout_marginTop="65dp"
+        android:background="#122FAA"
+        android:gravity="center"
+        android:text=" Введите космонавта"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_2"
+        android:layout_width="326dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="216dp"
+        android:background="@drawable/backarrow"
+        android:text="Имя Фамилия"
+        android:textColor="#B0B7C6"
+        android:textSize="32sp" />
+
+    <ImageButton
+        android:layout_width="92dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="210dp"
+        android:padding="28dp"
+        android:src="@drawable/search"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
