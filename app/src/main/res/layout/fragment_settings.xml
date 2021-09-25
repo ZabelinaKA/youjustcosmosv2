@@ -23,7 +23,7 @@
         android:layout_height="65dp"
         android:background="#122FAA"
         android:elevation="5dp"
-        android:src="@drawable/dehaze"
+        android:src="@drawable/arrow_back"
         app:layout_constraintBottom_toBottomOf="@id/tb_topbar"
         app:layout_constraintStart_toStartOf="@id/tb_topbar"
         app:layout_constraintTop_toTopOf="@id/tb_topbar" />
