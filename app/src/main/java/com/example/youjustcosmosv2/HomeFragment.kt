@@ -15,8 +15,8 @@ class HomeFragment : Fragment(R.layout.fragment_home), AstroAdapter.AstroClickLi
     private lateinit var binding: FragmentHomeBinding
 
     override fun onAstroClick(id: Int) {
-        val action = HomeFragmentDirection.toDetails(Id)
-        findNavController().navigate(action)
+//        val action = HomeFragmentDirection.toDetails(Id)
+//        findNavController().navigate(action)
     }
 
     override fun onCreateView(
@@ -27,7 +27,8 @@ class HomeFragment : Fragment(R.layout.fragment_home), AstroAdapter.AstroClickLi
         binding = FragmentHomeBinding.inflate(
             inflater,
             container,
-            false)
+            false
+        )
         return binding.root
     }
 
@@ -35,13 +36,5 @@ class HomeFragment : Fragment(R.layout.fragment_home), AstroAdapter.AstroClickLi
         super.onViewCreated(view, savedInstanceState)
         val adapter = AstroAdapter(listOfAstro)
         adapter.clickListener = this
-        binding.recycler.adapter = adapter
-        adapter.recycler.layoutManager = LinearLayoutManager(
-            requireContext(), RecyclerView.VERTICAL, false)
-       binding.homeFragment.setOnClickListener {
-           val action = HomeFragmentDirections.toDetails(0)
-           findNavController().navigate(action)
-       }
-
     }
 }

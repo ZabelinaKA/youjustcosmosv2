@@ -3,7 +3,7 @@
     package="com.example.youjustcosmosv2">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -11,15 +11,16 @@
         android:theme="@style/Theme.YoujustCosmosV2">
         <activity
             android:name=".SecondActivity"
+            android:exported="false"
             android:label="@string/title_activity_second"
-            android:theme="@style/Theme.YoujustCosmosV2.NoActionBar"></activity>
+            android:theme="@style/Theme.YoujustCosmosV2.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:exported="false"
             android:theme="@style/Theme.YoujustCosmosV2.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
